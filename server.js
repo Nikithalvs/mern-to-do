@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json()); 
 
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Failed to connect to MongoDB:', err));
 
